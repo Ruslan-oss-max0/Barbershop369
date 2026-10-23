@@ -73,8 +73,8 @@
           {
             id: "interior",
             caption: "Інтер'єр",
-            alt: "Інтер'єр та вінтажні крісла чоловічого барбершопу",
-            imageUrl: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
+            alt: "Інтер'єр барбершопу: ряд крісел та дзеркал",
+            imageUrl: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
           },
           {
             id: "haircut",
@@ -415,6 +415,8 @@
       .hero__tag {
         display: inline-flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
         gap: 8px;
         padding: 6px 14px;
         background-color: var(--color-gold-muted);
@@ -423,9 +425,21 @@
         color: var(--color-gold);
         font-size: 0.75rem;
         font-weight: 700;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
         margin-bottom: 22px;
+        max-width: 100%;
+        line-height: 1.35;
+      }
+
+      .hero__tag-extra {
+        display: none;
+      }
+
+      @media (min-width: 520px) {
+        .hero__tag-extra {
+          display: inline;
+        }
       }
 
       .hero__tag::before {
@@ -1103,7 +1117,7 @@
       <section class="hero">
         <div class="container hero__content fade-in">
           <div class="hero__tag">
-            <span data-config="city">Київ</span> · <span data-config="address">вул. Гарматна, 38А</span> · <span data-config="locationDetail">ЖК «Козацький»</span>
+            <span class="hero__tag-extra"><span data-config="city">Київ</span> · </span><span data-config="address">вул. Гарматна, 38А</span><span class="hero__tag-extra"> · <span data-config="locationDetail">ЖК «Козацький»</span></span>
           </div>
 
           <h1 class="hero__title">
@@ -1293,8 +1307,8 @@
             <div class="gallery-item fade-in" id="gallery-item-interior">
               <img
                 class="gallery-item__img"
-                src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=80"
-                alt="Інтер'єр та вінтажні крісла чоловічого барбершопу"
+                src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=800&q=80"
+                alt="Інтер'єр барбершопу: ряд крісел та дзеркал"
                 loading="lazy"
                 width="800"
                 height="600"
